@@ -80,6 +80,10 @@ app.get('/', (req, res) => {
     sendIndexRoot(res)
 })
 
+app.get('/joke/:id', (req, res) => {
+    sendIndexRoot(res)
+})
+
 app.get('/api/v1/joke/:id', (req, res) => {
     const { id } = req.params
     if (jokes.find(j => j.id.toString() === id.toString())) {
